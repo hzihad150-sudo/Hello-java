@@ -5,23 +5,22 @@ public class FibonacciSeries {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("How many numbers you want? ");
+        System.out.print("How many numbers: ");
         int n = sc.nextInt();
 
-        int a = 0;
-        int b = 1;
+        int First = 0;
+        int Second = 1;
+        int fibo;
 
-        System.out.print("Fibonacci Series: ");
+        System.out.print(First + " " + Second);
 
-        for (int i = 1; i <= n; i++) {
+        for (int i = 3; i <= n; i++) {
+            fibo = First + Second;
+            System.out.print(" " + fibo);
 
-            System.out.print(a + " ");
-
-            int next = a + b;
-            a = b;
-            b = next;
+            First = Second;  
+            Second = fibo;
         }
-
-        sc.close();
+		System.out,println();
     }
 }
